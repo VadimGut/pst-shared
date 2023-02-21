@@ -1,5 +1,4 @@
 import { db } from "../utils/db";
-// import { getNowDate } from "../utils/helpers";
 import helpers from "../utils/helpers";
 import { PsGamePrice } from "../types";
 import * as moment from "moment";
@@ -8,7 +7,7 @@ import * as _ from "lodash";
 module.exports = class PsGamePriceModel {
   tableName = "ps_game_prices";
 
-  async savePrices(data: PsGamePriceModel): Promise<any | false> {
+  async savePrices(data: PsGamePrice): Promise<any | false> {
     this.validatePrices(data);
 
     const lastPrice = await db(this.tableName)
@@ -52,7 +51,7 @@ module.exports = class PsGamePriceModel {
     return false;
   }
 
-  insert(data: PsGamePriceModel) {
+  insert(data: PsGamePrice) {
     return db(this.tableName).insert({
       ...data,
       created_at: helpers.getNowDate(),
@@ -62,11 +61,11 @@ module.exports = class PsGamePriceModel {
     });
   }
 
-  updatePrices(id: number, data: PsGamePriceModel): Promise<any> {
+  updatePrices(id: number, data: PsGamePrice): Promise<any> {
     return db(this.tableName).where("id", id).update(data);
   }
 
-  private validatePrices(data: PsGamePriceModel) {
+  private validatePrices(data: PsGamePrice) {
     if (_.isNil(data.base_price)) {
       throw new Error("Base price is required");
     }

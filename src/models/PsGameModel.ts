@@ -35,7 +35,7 @@ module.exports = class PsGameModel {
     return [];
   }
 
-  async upsert(data: PsGameModel, psGameId: string): Promise<void> {
+  async upsert(data: PsGame, psGameId: string): Promise<void> {
     const cData = this.cleanData(data);
 
     const insert = () => {
@@ -67,7 +67,7 @@ module.exports = class PsGameModel {
     }
   }
 
-  private cleanData(data: PsGameModel): PsGameModel {
+  private cleanData(data: PsGame): PsGame {
     const cData = {
       ...data,
       game_in_other_regions_json: JSON.stringify(

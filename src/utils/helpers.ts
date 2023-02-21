@@ -6,7 +6,7 @@ import { Moment } from "moment";
 const helpers = {
   sleep: (ms: number) => new Promise((r) => setTimeout(r, ms)),
 
-  toSnakeCase(obj: string) {
+  toSnakeCase(obj: any) {
 
     return _.transform(obj, (acc: any, value: any, key: any, target: any) => {
       const camelKey = _.isArray(target) ? key : _.snakeCase(key);
