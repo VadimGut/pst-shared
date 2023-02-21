@@ -2,7 +2,7 @@ import { db } from "../utils/db";
 import { omitBy, isNull } from "lodash";
 import { PsGame } from "../types";
 
-module.exports = class PsGameModel {
+export default class PsGameModel {
   tableName = "ps_games";
 
   getPsGameByStoreGuid(storeGuid: string, storeRegion: string): Promise<any> {

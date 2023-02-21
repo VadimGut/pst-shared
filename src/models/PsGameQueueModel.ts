@@ -3,7 +3,7 @@ import { PsGameQueue, PsGameQueueStatus, PsGameQueueTopic } from "../types";
 import { db } from "../utils/db";
 import helpers from "../utils/helpers";
 
-module.exports = class PsGameQueueModel {
+export default class PsGameQueueModel {
   tableName = "ps_game_queues";
 
   setTaskStatus(id: number, status: PsGameQueueStatus, message?: string) {

@@ -1,6 +1,6 @@
 import * as _ from "lodash";
 import * as fs from "fs";
-import moment = require("moment");
+import moment from "moment";
 import { Moment } from "moment";
 
 const helpers = {

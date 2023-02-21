@@ -4,7 +4,7 @@ import { PsGamePrice } from "../types";
 import * as moment from "moment";
 import * as _ from "lodash";
 
-module.exports = class PsGamePriceModel {
+export default class PsGamePriceModel {
   tableName = "ps_game_prices";
 
   async savePrices(data: PsGamePrice): Promise<any | false> {
