@@ -19,6 +19,7 @@
   },
   "author": "VG",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@types/knex": "^0.16.1",
