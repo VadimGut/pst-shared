@@ -1,6 +1,6 @@
 {
   "name": "pst-shared",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -16,6 +16,15 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:VadimGut/pst-shared.git"
+  },
+  "exports": {
+    "types": {
+      "types": "./lib/index.d.ts"
+    },
+    "lib": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js"
+    }
   },
   "author": "VG",
   "license": "ISC",
