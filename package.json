@@ -1,8 +1,7 @@
 {
   "name": "pst-shared",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
-  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
@@ -17,15 +16,7 @@
     "type": "git",
     "url": "git@github.com:VadimGut/pst-shared.git"
   },
-  "exports": {
-    "types": {
-      "types": "./lib/index.d.ts"
-    },
-    "lib": {
-      "import": "./src/index.ts",
-      "require": "./lib/index.js"
-    }
-  },
+  "exports": "./lib/index.js",
   "author": "VG",
   "license": "ISC",
   "type": "module",
