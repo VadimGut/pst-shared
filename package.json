@@ -1,6 +1,6 @@
 {
   "name": "pst-shared",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -19,7 +19,6 @@
   "exports": "./lib/index.js",
   "author": "VG",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@types/knex": "^0.16.1",
@@ -40,6 +39,7 @@
   "dependencies": {
     "knex": "^2.4.2",
     "lodash": "^4.17.21",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1"
   }
 }
