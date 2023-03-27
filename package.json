@@ -16,7 +16,11 @@
     "type": "git",
     "url": "git@github.com:VadimGut/pst-shared.git"
   },
-  "exports": "./lib/index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./lib/index.js",
+    "./lib/types": "./lib/index.d.ts"
+  },
   "author": "VG",
   "license": "ISC",
   "devDependencies": {
